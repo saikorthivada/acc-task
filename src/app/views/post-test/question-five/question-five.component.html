@@ -1,0 +1,9 @@
+<app-question [questionText]="questionText"></app-question>
+<div class="text-center mt-3 test-here-label">Test Here.</div>
+<app-add-list (arrayList)="getArrayList($event)"></app-add-list>
+<div class="form-check ml-3">
+    <input type="checkbox" class="form-check-input" id="caseSensitive" [(ngModel)]="isCaseSensitive" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="caseSensitive">Case Sensitive</label>
+</div>
+<app-output [outputInfo]="resultArr"></app-output>
+<br>

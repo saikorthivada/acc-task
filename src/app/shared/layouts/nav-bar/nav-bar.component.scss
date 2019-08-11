@@ -1,0 +1,9 @@
+.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.nav-link:not(.active) {
+    color: black;
+    font-weight: 500;
+}
