@@ -11,6 +11,8 @@ export class QuestionFourComponent implements OnInit {
   reversedStringForm: FormGroup;
   builtInOutput = '';
   customStringOutput = '';
+  // tslint:disable-next-line:max-line-length
+  questionText = '4.Write a function to reverse every word of a string.(a) Using split and reverse. (b) Without using split and reverse and in O(1) space(since strings are immutable, assume that the input is a character array).';
   constructor(private formBuilder: FormBuilder, private utilsService: UtilsService) { }
 
   ngOnInit() {
