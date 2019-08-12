@@ -5,6 +5,9 @@
         <div class="d-flex mt-3">
             <textarea class="col-12" rows="5" formControlName="JSONelement" placeholder="Enter object"></textarea>
         </div>
+        <div class="error ml-3" *ngIf="(jsonForm.get('JSONelement').invalid) && (jsonForm.get('JSONelement').touched || jsonForm.get('JSONelement').dirty)">
+            {{getErrorMessage(jsonForm, validationMessages, 'JSONelement')}}
+        </div>
     </ng-container>
     <div class="d-flex justify-content-end mt-3">
         <button class="btn btn-primary" [disabled]="jsonForm.invalid">Submit</button>

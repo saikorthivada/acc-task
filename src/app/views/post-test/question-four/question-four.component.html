@@ -8,6 +8,9 @@
             <textarea class="form-control" formControlName="stringToBeReversed" id="fieldToReverse" rows="3"
                 placeholder="Enter the string"></textarea>
         </div>
+        <div class="error ml-3" *ngIf="(reversedStringForm.get('stringToBeReversed').invalid) && (reversedStringForm.get('stringToBeReversed').touched || reversedStringForm.get('stringToBeReversed').dirty)">
+            {{getErrorMessage(reversedStringForm, validationMessages, 'stringToBeReversed')}}
+        </div>
         <div class="d-flex justify-content-center">
             <button class="btn btn-primary" [disabled]="reversedStringForm.invalid" (click)="reverseWordsOfString()">Submit</button>
             <button class="btn btn-danger ml-3" (click)="clearText()">Clear</button>

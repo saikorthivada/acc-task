@@ -7,6 +7,9 @@
                     <i class="fa fa-plus"></i>&nbsp;Add
                 </button>
             </div>
+            <div class="error ml-3" *ngIf="(addListForm.get('element').invalid) && (addListForm.get('element').touched || addListForm.get('element').dirty)">
+                {{getErrorMessage(addListForm, validationMessages, 'element')}}
+            </div>
         </form>
         <div>
             <ng-container *ngFor="let item of itemsList; let i=index">
