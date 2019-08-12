@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormArray, FormControl } from '@angular/forms';
 
 @Injectable()
-export class BaseClass implements OnInit {
+export class BaseClass {
 
     private basePage: any;
     public pageLoaded = false;

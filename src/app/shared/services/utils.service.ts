@@ -48,9 +48,7 @@ export class UtilsService {
 
   // get json keys
   getJsonKeys(jsonObject) {
-    console.log(jsonObject);
     this.getAllKeys(jsonObject);
-    console.log(this.keys);
     return this.keys;
   }
   private getAllKeys(obj) {
@@ -85,7 +83,6 @@ export class UtilsService {
         reverseWord = reverseWord + str[i];
       }
     }
-    console.log(finalString);
     return finalString;
   }
 
